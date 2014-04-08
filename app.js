@@ -1,7 +1,6 @@
 var express = require("express");
 var app = express();
 var mysql = require('mysql');
-var idgen = require('idgen');
 app.use(express.json());
 app.use(express.urlencoded());
 app.set('views',__dirname+'/views');
