@@ -13,10 +13,10 @@ app.listen('3000');
 
 
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'abhinav',
-  database: 'mob'
+  host     : 'us-cdbr-east-05.cleardb.net',
+  user     : 'b752c0a96462b1',
+  password : '13848fc6',
+  database: 'heroku_a98b51cff16220b'
 });
 
 
