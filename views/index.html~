@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern @ Mobiquity</title>    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">    
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+         <div class="navbar navbar-dark navbar-static-top" role="navigation">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <i class="fa fa-tasks"></i> Address Book        
+        </div> 
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" data-toggle="modal" data-target="#addModal"></i> Add Contact </a></li>               
+      </ul>          
+          </li>
+    </div>
+      </div> 
+    </div>
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu"> 
+                     {{#users}}
+                    <li id='{{Id}}'>
+                        <a href="#" class="show"><i class="fa fa-user fa-fw"></i>{{fname}} &nbsp;{{lname}} <div style='display:none'>{{address}}</div></a>
+                    
+		</li>
+		{{/users}}	
+                                       
+                </ul>                
+            </div>            
+        </nav>      
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addcontact" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-body">
+                    <div class="addcontact">
+                                        <div id="error1">&nbsp;</div><br> 
+              <h3 class="first-child text-center">Create New Contact</h3>
+              <hr>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="required" id="fname" placeholder="First name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your first name here." data-original-title=" First Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="lname" placeholder="last name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your last name here." data-original-title="Last Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address" placeholder="Enter address" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid address here." data-original-title="Address" required>
+                </div>
+                <div class="form-group">                  
+                </div>                
+                <button type="Save" class="btn btn-color" id="addform" data-dismiss="modal" onclick="window.location.reload()">Save</button>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editcontact" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-body">
+                    <div class="editcontact">
+                                        <div id="error1">&nbsp;</div><br> 
+              <h3 class="first-child text-center">Edit Contact Information</h3>
+              <hr>
+              <form id="contactform" method="post" action="">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="editfname" name="fname" placeholder="First name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your first name here." data-original-title=" First Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="editlname" name="lname" placeholder="last name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your last name here." data-original-title="Last Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="editaddress" name="address" placeholder="Enter address" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid address here." data-original-title="Address" required>
+                </div>
+                <div class="form-group">                  
+                </div>                
+                <button type="Save" class="btn btn-color" id="update-user" data-dismiss="modal" >Update</button>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Contact </h1>
+                </div>                
+            </div>            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bars fa-fw"></i> Contact Details
+                            <div class="pull-right">
+                                         <ul class="nav navbar-nav" role="menu">
+                                        <li><button class='edit' data-toggle="modal" data-target="#editModal">Edit Contact</button>
+                                        </li>    
+                                        <li><button class='delete' >Delete Contact</button>
+                                        </li>
+                                    </ul>
+                                    
+                            </div>
+                        </div>                        
+                        <div class="panel-body" id='user-detail'>
+                        </div>                       
+                    </div>                  
+                </div>                
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-sun-o fa-fw" ></i> Weather
+                        </div>                        
+                        <div class="panel-body" id="weather">                          
+                        </div>                        
+                    </div>               
+                    </div>                   
+                </div>                
+            </div>            
+        </div>
+		</div>   
+    <script src="/js/jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

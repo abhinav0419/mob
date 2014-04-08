@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern @ Mobiquity</title>    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">    
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+         <div class="navbar navbar-dark navbar-static-top" role="navigation">
+      <div class="container">        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><i class="fa fa-tasks"></i> Address Book </a>       
+        </div> 
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+	  <li><a href="index.html"></i> Home </a></li>
+      <li><a href="#" data-toggle="modal" data-target="#addModal"></i> Add Contact </a></li>               
+      </ul>          
+          </li>
+    </div>
+      </div> 
+    </div>
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu"> 
+                   
+                    <li>{{#users}}
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i>{{fname}} ,{{lname}}</a>
+			{{/users}}                    
+			</li>
+			
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Nipun Gupta</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Michael Fabiano</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Elise Car</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Umang Goel</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Tanmay Garg</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Rishabh Singh</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Barack Obama</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> Brock Lesnar</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-user fa-fw"></i> John Cena</a>
+                    </li>                    
+                </ul>                
+            </div>            
+        </nav>      
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addcontact" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-body">
+                    <div class="addcontact">
+                                        <div id="error1">&nbsp;</div><br> 
+              <h3 class="first-child text-center">Create New Contact</h3>
+              <hr>
+              <form id="contactform" method="post" action="">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your first name here." data-original-title=" First Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="lname" name="lname" placeholder="last name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your last name here." data-original-title="Last Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address" name="address" placeholder="Enter address" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid address here." data-original-title="Address">
+                </div>
+                <div class="form-group">                  
+                </div>                
+                <button type="Save" class="btn btn-color">Save</button>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editcontact" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-body">
+                    <div class="editcontact">
+                                        <div id="error1">&nbsp;</div><br> 
+              <h3 class="first-child text-center">Edit Contact Information</h3>
+              <hr>
+              <form id="contactform" method="post" action="">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your first name here." data-original-title=" First Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="lname" name="lname" placeholder="last name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter your last name here." data-original-title="Last Name">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="address" name="address" placeholder="Enter address" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid address here." data-original-title="Address">
+                </div>
+                <div class="form-group">                  
+                </div>                
+                <button type="Save" class="btn btn-color">Update</button>
+              </form>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Contact </h1>
+                </div>                
+            </div>            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bars fa-fw"></i> Contact Details
+                            <div class="pull-right">
+                                         <ul class="nav navbar-nav" role="menu">
+                                        <li><a href="#" data-toggle="modal" data-target="#editModal">Edit Contact</a>
+                                        </li>    
+                                        <li><a href="#">Delete Contact</a>
+                                        </li>
+										<li><a href="#">Clear Details</a>
+                                        </li>
+                                    </ul>
+                                    
+                            </div>
+                        </div>                        
+                        <div class="panel-body">
+                        </div>                       
+                    </div>                  
+                </div>                
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-sun-o fa-fw"></i> Weather
+                        </div>                        
+                        <div class="panel-body">                          
+                        </div>                        
+                    </div>               
+                    </div>                   
+                </div>                
+            </div>            
+        </div>
+		</div>   
+    <script src="/js/jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

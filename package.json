@@ -1,0 +1,21 @@
+{
+  "author": "Abhinav <abhinav0419@gmail.com>",
+  "name": "mob",
+  "description": "Address Book",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/abhinav0419/mob.git"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "express": "^3.5.1",
+    "mysql": "^2.1.1",
+    "hbs": "^2.5.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
