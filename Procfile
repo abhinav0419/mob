@@ -1,1 +1,1 @@
-web:node app.js
+d1:node app.js
