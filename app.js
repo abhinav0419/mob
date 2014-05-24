@@ -15,7 +15,7 @@ app.listen('3000');
 var connection = mysql.createConnection({
   host     : 'us-cdbr-east-06.cleardb.net',
   user     : 'bd5505b0354d8f',
-  password : '8a18b277 ',
+  password : '8a18b277',
   database: 'heroku_282c5e92e038485'
 });
 
