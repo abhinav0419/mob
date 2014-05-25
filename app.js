@@ -13,10 +13,10 @@ app.use(express.static(__dirname + '/public'));
 
 //app.listen('3000');
 
-var port = Number(process.env.PORT || 4000);
-app.listen(port, function() {
-console.log("Listening on " + port);
-});
+//var port = Number(process.env.PORT || 4000);
+//app.listen(port, function() {
+//console.log("Listening on " + port);
+//});
 var connection = mysql.createConnection({
   host     : 'us-cdbr-east-06.cleardb.net',
   user     : 'bd5505b0354d8f',
