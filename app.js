@@ -9,7 +9,7 @@ app.engine('html', require('hbs').__express);
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen('3000');
+//app.listen('3000');
 
 
 var connection = mysql.createConnection({
