@@ -11,7 +11,7 @@ app.engine('html', require('hbs').__express);
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen('3000');
+//app.listen('3000');
 
 var port = Number(process.env.PORT || 4000);
 app.listen(port, function() {
