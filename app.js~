@@ -1,4 +1,4 @@
-// the working link of the site http://fast-harbor-8683.herokuapp.com/
+//http://fast-harbor-8683.herokuapp.com/
 
 var express = require("express");
 var app = express();
