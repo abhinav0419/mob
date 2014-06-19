@@ -20,7 +20,7 @@ this command will create a node_module directory.
 
 SETTING UP MYSQL
 -Create a database named 'mob'
--Create a table named 'mob' with column name as ID primary key, fname, lname, address.
+-Create a table named 'mob' with column name as (id primary key, fname, lname, address).
 
 RUNNING THE APP-
 Just go to the terminal and type
