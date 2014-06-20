@@ -1,23 +1,5 @@
 $(document).ready(function(){
-var lati;
-var longi;
 $('a.show').on('click', function(){
-
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-   var lati=position.coords.latitude;
-   var longi =position.coords.longitude;	
-}
-
 var apiKey = '31b7ed68bc12616247a0f3e272fbb089';
     var url = 'https://api.forecast.io/forecast/';
     var lati = 29.652;
@@ -47,7 +29,7 @@ console.log("Inside document.ready()");
           console.log("EDIT Item Clicked.");
 	var arr = atext.split("|");
 	console.log(arr[0]+","+arr[1]);
-	
+
         var el = arr[1];
         console.log('ID of edited list item:',el);
         var name = arr[0].split(' ');
@@ -55,8 +37,8 @@ console.log("Inside document.ready()");
           $('#editlname').val(name[1]);
           $('#editaddress').val(name[2]);
 	});
-	
-		
+
+
 	$('#addform').on('click',function(e){
 	e.preventDefault();
         console.log("Inside save button on-click");
@@ -85,14 +67,14 @@ console.log("Inside document.ready()");
 	  console.log("i am in done");
           var li= '<li id="'+uid+'"><a class="show"><i class="fa fa-user fa-fw"></i>'+payload.fname+'&nbsp;'+payload.lname+'<div style="display:none">'+payload.address+'</div></a></li>';
           $('#side-menu').append(li);
-		
+
           })
           .fail(function() {
             console.log("Error occured in Ajax call");
           });
         
         }); //end of on-click.*/
-	
+
 //Deleting an item.
       $('button.delete').on('click', function(){
         console.log("Delete Button of a list item clicked");
@@ -102,7 +84,7 @@ console.log("Inside document.ready()");
 	}
 	var arr = atext.split("|");
 	console.log(arr[0]+","+arr[1]);
-	
+
         var el = arr[1];
         console.log('ID of clicked list item:',el);
 
@@ -172,5 +154,3 @@ $('#update-user').on('click', function(e){
         }); //End of PUT Ajax Call.
 });
       });//end of document.ready()
-		
-	
