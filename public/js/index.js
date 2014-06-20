@@ -1,5 +1,23 @@
 $(document).ready(function(){
+var lati;
+var longi;
 $('a.show').on('click', function(){
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+   var lati=position.coords.latitude;
+   var longi =position.coords.longitude;	
+}
+
 var apiKey = '31b7ed68bc12616247a0f3e272fbb089';
     var url = 'https://api.forecast.io/forecast/';
     var lati = 29.652;
