@@ -21,7 +21,7 @@ this command will create a node_module directory.
 SETTING UP MYSQL
 -Create a database named 'mob'
 -Create a table named 'mob' with column name as (id primary key, fname, lname, address).
-
+In the app.js dont forget to put the password of your database in the password option.
 RUNNING THE APP-
 Just go to the terminal and type
 - node app
